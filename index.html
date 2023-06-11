@@ -16,7 +16,7 @@
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.svg" type="image/svg">
-  
+
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css/plugins/bootstrap.min.css">
@@ -46,7 +46,24 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("a").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
 
+          var hash = this.hash;
+
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 1200, function(){
+            window.location.hash = hash;
+          });
+        }
+      });
+    });
+  </script>
 </head>
 
 <body data-spy="scroll" data-target=".scrollspy" class="bg-dark">
@@ -95,18 +112,18 @@
             <button class="button-close" data-dismiss="modal" aria-label="Close"><i
                 class="icon icon-lg icon-arrows-remove"></i></button>
 
-                <div class="p-t-b-15">
-                  <img src="images/logotipo-01.png" height="86" width="auto" alt="">
-                </div>
+            <div class="p-t-b-15">
+              <img src="images/logotipo-01.png" height="86" width="auto" alt="">
+            </div>
             <!-- Headline -->
             <div class="wrap-line border-dark">
-              <h3><span class="font-weight-200">Estamos</span> chegando!</h3>
+              <h2><span class="font-weight-200">Estamos</span> chegando!</h2>
             </div>
             <!-- /End Headline -->
 
             <!-- Description -->
             <div class="p-t-b-15">
-              <p><b>Deixe seu e-mail abaixo </b><br>para receber notificação de quando o site for lançado</p>
+              <p><b>Deixe seu e-mail abaixo </b><br>para ser o primeiro a saber das novidades da Nákama</p>
             </div>
             <!-- /End Description -->
 
@@ -210,10 +227,14 @@
 
               <div class="p-t-b-15">
                 <!-- Headline & Description -->
-                <h2><span class="font-weight-200">Em breve, lançaremos o</span><br>nosso site!</h2>
+                <h1>Qual a <span style="color:#ff856f ">MARCA </span> que seu <br>negócio
+                  está deixando nas pessoas?</h1>
 
-                <p>Deixe seu e-mail para ser notificado em primeira mão quando lançarmos.<br>
-                </p>
+                <h2>Esta é a pergunta que todos deveríamos se fazer,
+                  pois a resposta é a razão <br>dos resultados estarem indo bem ou mal, caminhando na direção
+                  certa ou errada.
+                </h2>
+                <h3>Em breve.</h3>
                 <!-- /End Headline & Description -->
               </div>
               <!-- Arrow -->
@@ -224,7 +245,8 @@
 
               <!-- Buttons -->
               <div class="p-t-b-15 btn-row">
-                <button class="btn btn-color" data-toggle="modal" data-target="#modal-notify" role="button">Me avisar quando lançar
+                <button class="btn btn-color" data-toggle="modal" data-target="#modal-notify" role="button">Me avisar
+                  quando lançar
                 </button>
                 <a class="btn btn-border-white show-info" role="button" data-href="#content">
                   Mais detalhes
@@ -265,28 +287,59 @@
 
                 <!-- Headline -->
                 <div class="wrap-line border-dark">
-                  <h3><span class="font-weight-200">Sobre a </span> Nákama</h3>
+                  <h3><span class="font-weight-200">Sobre o </span> Estúdio Nákama</h3>
                 </div>
                 <!-- /End Headline -->
 
                 <!-- Description -->
                 <div class="p-t-b-15  text-grey">
-                  <p>Acreditamos que a construção da consciência de marca é chave para reduzir o
-                    custo em promoção e ofertas, conectando o público com a marca e tornando-a
-                    preferência e não uma mera comparação de preço,
-                    assim o preço entra para segundo plano em uma tomada de decisão.<strong> Fale Conosco.</strong></p>
-                    
+                  <p>A essência de tudo isto se resume em Conexão, acreditamos que Marcas conectadas com seu público são
+                    mais vendáveis e duráveis, são a preferência e não a opção mais em conta, são compradas e não
+                    vendidas esmagando suas margens.</p><br>
+                  <P>Então fica a pergunta, como tornar sua marca mais conectada com seu público?</P><br>
+                  <p>Deixe seu e-mail e solicite uma consultoria com nossos especialistas em Gestão de Marcas e
+                    Branding.</p><br>
+                  <p style="font-weight: 700;background: linear-gradient(45deg, rgba(112,46,61,1) 0%, rgba(227,78,53,1) 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">RECADO:</p><br>
+                  <p>Ah e lembrando, não somos uma agência e não fazemos marketing digital, construímos marcas vendáveis
+                    e duráveis 😊</p>
+
                 </div>
+                <div class="wrap-line border-dark">
+
+                  <h3 style="margin-top:30px"><span class="font-weight-200">CATEGORIAS </span></h3>
+                </div>
+                <ul class="about_categories">
+                  <div class="about_categories_group">
+                    <a href="#contact">
+                    <li>Criação <br>de Marcas </li>
+                  </a>
+                  <a href="#contact">
+                    <li>Reposicionamento <br>de Marcas</li>
+                </a>
+                  </div>
+                  <div class="about_categories_group">
+                    <a class="smooth-scrol "href="#contact">
+                    <li>Sites e
+                      <br>Aplicativos</li>
+                    </a>
+                      <a class="smooth-scrol " href="#contact">
+                      <li>Materiais e
+                      <br>Comunicação Visual</li>
+                      </a>
+                  </div>
+
+                </ul>
+
                 <!-- /End Description -->
 
                 <!-- Social Media Links -->
                 <div class="p-t-b-15">
                   <p>
-                    <a href="https://www.facebook.com/egotypes" target="_blank">
+                    <a href="#" target="_blank">
                       <i class="fa fa-facebook"></i></a>
-                    <a href="https://twitter.com/egotype" target="_blank">
+                    <a href="#" target="_blank">
                       <i class="fa fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/egotype___design" target="_blank">
+                    <a href="#" target="_blank">
                       <i class="fa fa-instagram"></i></a>
                   </p>
                 </div>
@@ -429,66 +482,66 @@
               </div>
             </div>
 
-             <!-- <div class="row">
+            <!-- <div class="row">
               <div class="col-lg-10 col-lg-offset-1 col-sm-12">
                 <div class="row">
                   <div class="col-sm-4 col-xs-6 p-t-b-5">  -->
 
-                    <!-- Icon -->
-                     <!-- <div class="p-t-b-15">
+            <!-- Icon -->
+            <!-- <div class="p-t-b-15">
                       <i class="icon icon-lg icon-basic-geolocalize-01"></i>
                     </div>  -->
-                    <!-- /End Icon -->
+            <!-- /End Icon -->
 
-                    <!-- Address -->
-                    <!-- <div class="p-t-b-15">
+            <!-- Address -->
+            <!-- <div class="p-t-b-15">
                       <h4>Address</h4>
 
                       <p>45 Park Avenue,<br>
                         New York, NY 10016</p>
                     </div> -->
-                    <!-- /End Address -->
+            <!-- /End Address -->
 
-                  <!-- </div>
+            <!-- </div>
 
                   <div class="col-sm-4 col-xs-6 p-t-b-5"> -->
 
-                    <!-- Icon -->
-                    <!-- <div class="p-t-b-15">
+            <!-- Icon -->
+            <!-- <div class="p-t-b-15">
                       <i class="icon icon-lg icon-basic-smartphone"></i>
                     </div> -->
-                    <!-- /End Icon -->
+            <!-- /End Icon -->
 
-                    <!-- Address -->
-                    <!-- <div class="p-t-b-15">
+            <!-- Address -->
+            <!-- <div class="p-t-b-15">
                       <h4>Direct</h4>
 
                       <p>T. <a href="tel:012345678991"> 01 23 456 78 99 1</a><br>
                         M. <a href="tel:012345678991">01 23 456 78 99 2</a></p>
                     </div> -->
-                    <!-- /End Address -->
+            <!-- /End Address -->
 
-                  <!-- </div>
+            <!-- </div>
 
                   <div class="col-sm-4  col-sm-offset-0 col-xs-6 col-xs-offset-3 p-t-b-5"> -->
 
-                    <!-- Icon -->
-                    <!-- <div class="p-t-b-15">
+            <!-- Icon -->
+            <!-- <div class="p-t-b-15">
                       <i class="icon icon-lg icon-basic-globe"></i>
                     </div> -->
-                    <!-- /End Icon -->
+            <!-- /End Icon -->
 
-                    <!-- Address -->
-                    <!-- <div class="p-t-b-15">
+            <!-- Address -->
+            <!-- <div class="p-t-b-15">
                       <h4>Web</h4>
 
                       <p><a href="mailto:">info@kounter.com</a><br>
                         <a href="">www.kounter.com</a>
                       </p>
                     </div> -->
-                    <!-- /End Address -->
+            <!-- /End Address -->
 
-                 
+
 
             <!-- Contact Alert -->
             <div id="message-contact" class="message-wrapper text-white message">
@@ -508,6 +561,7 @@
   <div id="photoswipe"></div>
 
   <!-- Scripts -->
+  
   <script src="js/plugins/jquery-1.12.4.min.js"></script>
   <script src="js/plugins/bootstrap.min.js"></script>
   <script src="js/plugins/scrollreveal.min.js"></script>
